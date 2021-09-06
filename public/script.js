@@ -71,9 +71,9 @@ $('html').keydown((e) => {
 
 socket.on('createMessage', (message, userId) => {
     if (userId != currentUserId)
-        $('ul').append(`<li class = "message"><b>${userId}: </b><br>${message}</li>`);
+        $('ul').append(`<hr><li class = "message"><b>${userId}: </b><br>${message}</li>`);
     else
-        $('ul').append(`<li class = "message"><b>Me: </b><br>${message}</li>`);
+        $('ul').append(`<hr><li class = "message"><b>Me: </b><br>${message}</li>`);
     scrollToBottom();
 })
 
