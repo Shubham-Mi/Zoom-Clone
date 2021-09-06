@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#video-grid {
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+.videoContent {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatBox {
+    flex: 0.2;
+}
+
+.user_videos {
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_controls {
+    display: flex;
+    background-color: #1C1E20;
+    color: #D2D2D2;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.main_controls {
+    display: flex;
+}
+
+.main_controls_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.main_controls_button i {
+    font-size: 20px;
+}
+
+.main_controls_button:hover {
+    background-color: #343434;
+    border-radius: 5px;
+}
+
+.leave_meeting {
+    color: #EB5343;
+}
+
+.chatBox {
+    display: flex;
+    flex-direction: column;
+    background-color: #242324;
+    border-left: 1px solid;
+}
+
+.main__header {
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.chat {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.send_message {
+    display: flex;
+    padding: 20px 12px;
+}
+
+.send_message input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #F5F5F5;
+}
+
+.message {
+    color: white;
+    list-style: none;
+}
+
+.unmute {
+    color: red;
+}
+
+.stop {
+    color: red;
+}
+
+.invitePop {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 20%;
+    top: 20%;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+  }
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #000;
+    font-weight: bold;
+}
+
+.copyBtn {
+    background-color: black;
+    color: white;
+}

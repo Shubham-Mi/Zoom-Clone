@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script>
+        const roomId = "<%= roomId %>";
+        </script>
+</head>
+<body>
+
+    <div class="main">
+        <div class="videoContent">
+            <div class="user_videos">
+                <div id="video-grid">
+                    
+                </div>
+            </div>
+            <div class="user_controls">
+                <div class="main_controls">
+                    <div class="main_controls_button main_mute_button" onclick="MuteUnmute()">
+                        <i class="fas fa-microphone"></i>
+                        <span>Mute</span>
+                    </div>
+                    <div class="main_controls_button main_play_button"  onclick="PlayStop()">
+                        <i class="fas fa-video"></i>
+                        <span>Stop</span>
+                    </div>
+                </div>
+                <div class="main_controls">
+                    <div class="main_controls_button" onclick="copyToClipboard()">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Invite</span>
+                    </div>
+                    <div class="main_controls_button leave_meeting" onclick="leaveMeeting()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Leave Meeting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatBox">
+            <div class="main__header">
+                <h6>Chat</h6>
+            </div>
+            <div class="chat">
+                <ul class="messages">
+
+                </ul>
+            </div>
+            <div class="send_message">
+                <input type="text" id="chat_message" placeholder="Enter message...">
+            </div>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
